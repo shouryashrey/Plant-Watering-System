@@ -22,13 +22,13 @@ def home():
 @app.route('/waterPlants/<int:seconds>', methods = ['GET']) 
 def disp(seconds): 
     waterPlants(seconds)
-    return jsonify({'data': 'waterring the plants for' + seconds}) 
+    return jsonify({'data': 'waterring the plants for' + str(seconds)}) 
 
 
 @app.route('/blinkFor/<int:times>', methods = ['GET']) 
 def blink(times): 
     blinkFor(times)
-    return jsonify({'data': 'Blinking Light for' + times}) 
+    return jsonify({'data': 'Blinking Light for' + str(times)}) 
   
   
 # driver function 
