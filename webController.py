@@ -26,7 +26,7 @@ def disp(seconds):
 
 
 @app.route('/blinkFor/<int:times>', methods = ['GET']) 
-def disp(times): 
+def blink(times): 
     blinkFor(times)
     return jsonify({'data': 'Blinking Light for' + times}) 
   
