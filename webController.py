@@ -29,6 +29,11 @@ def disp(seconds):
 def blink(times): 
     blinkFor(times)
     return jsonify({'data': 'Blinking Light for' + str(times)}) 
+
+@app.route('/blinkForWithInterval/<int:times>/<float:interval>', methods = ['GET']) 
+def blinkWithInterval(times, interval): 
+    blinkForWithInterval(times, interval)
+    return jsonify({'data': 'Blinking Light for' + str(times)}) 
   
   
 # driver function 
