@@ -13,6 +13,14 @@ def waterPlants(seconds):
  sleep(seconds) # Sleep for 1 second
  GPIO.output(activePin, GPIO.LOW) # Turn off
 
+def blinkFor(times):
+ for i in range(times):
+  GPIO.output(activePin, GPIO.HIGH) # Turn on
+  sleep(1) # Sleep for 1 second
+  GPIO.output(activePin, GPIO.LOW) # Turn off
+  sleep(1) # Sleep for 1 second
+
+
 # while True: # Run forever
 #  GPIO.output(activePin, GPIO.HIGH) # Turn on
 #  sleep(1) # Sleep for 1 second

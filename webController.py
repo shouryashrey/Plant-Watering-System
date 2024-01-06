@@ -1,6 +1,6 @@
 # Using flask to make an api 
 # import necessary libraries and functions 
-from main import waterPlants
+from main import *
 from flask import Flask, jsonify, request 
   
 # creating a Flask app 
@@ -23,6 +23,12 @@ def home():
 def disp(seconds): 
     waterPlants(seconds)
     return jsonify({'data': 'waterring the plants for' + seconds}) 
+
+
+@app.route('/blinkFor/<int:times>', methods = ['GET']) 
+def disp(times): 
+    blinkFor(times)
+    return jsonify({'data': 'Blinking Light for' + times}) 
   
   
 # driver function 
