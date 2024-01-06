@@ -23,6 +23,7 @@ def blinkFor(times):
 
 def blinkForWithInterval(times, interval=1):
  for i in range(times):
+  print("Time => ", times, "\nInterval => ", interval)
   GPIO.output(activePin, GPIO.HIGH) # Turn on
   sleep(interval) # Sleep for 1 second
   GPIO.output(activePin, GPIO.LOW) # Turn off
